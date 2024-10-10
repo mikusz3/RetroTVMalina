@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroTVMalina</title>
+    <link rel="icon" href="retrotvmalinalogo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #2c2c2c;
+            padding: 20px;
+            color: white;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: #ff6600;
+        }
+        iframe {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" onclick="showSection('glowna')">
+        <img src="retrotvmalinalogo.png" alt="RetroTVMalina Logo" style="height: 40px;">
+    </a>
+    <nav>
+        <a onclick="showSection('glowna')">Sekcja Główna</a>
+        <a onclick="showSection('tutoriale')">Tutoriale</a>
+        <a onclick="showSection('faq')">FAQ</a>
+        <a onclick="showSection('blog')">Blog</a>
+        <a onclick="showSection('grupa-facebook')">Grupa Facebook</a>
+        <a onclick="showSection('wiki')">Wiki</a>
+        <a onclick="showSection('playlista-kanaly')">Playlista Kanały</a>
+        <a onclick="showSection('playlista-retro')">Playlista RetroTVMalina</a>
+    </nav>
+</header>
+
+<section id="glowna" class="active">
+    <h2>Sekcja Główna</h2>
+    <!-- Wyśrodkowane logo -->
+    <img src="retrotvmalinalogo.png" alt="RetroTVMalina Logo" style="display: block; margin: 0 auto; width: 150px;">
+    
+    <p><strong>Zastrzeżenie:</strong> Projekt „RetroTVMalina” jest tworzony w celach hobbystycznych i nie jest płatny. Projekt opiera się na tutorialach, które znajdziesz w sekcji „Tutoriale”.</p>
+    <p>RetroTVMalina zamienia Raspberry Pi w retro telewizor z wymiennymi kanałami. Możesz hostować swoje kanały za pomocą programów takich jak VLC, Crontab czy DizqueTV.</p>
+    <p>Kontakt: <a href="mailto:mikusz3plooppoopa@gmail.com">mikusz3plooppoopa@gmail.com</a></p>
+</section>
+
+<section id="tutoriale">
+    <h2>Tutoriale</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jjX8NkeinLU?si=exbx9hnzSlWaRbbJ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9kJC4ZaI-T0?si=dKvLHa6zJ2fsU1Pr" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <p>Wkrótce tu będą filmiki raportujące stan projektu i tutoriale.</p>
+</section>
+
+<section id="faq">
+    <h2>FAQ</h2>
+    <h3>Pytanie nr. 1: Czy ten projekt jest płatny?</h3>
+    <p>Odpowiedź: Nie, projekt jest tworzony hobbystycznie i jest bezpłatny.</p>
+    <h3>Pytanie nr. 2: Czy można stworzyć swoje kanały?</h3>
+    <p>Odpowiedź: Tak, ale wymaga to cierpliwości oraz znajomości odpowiednich programów.</p>
+    <h3>Pytanie nr. 3: Czy projekt jest opensource?</h3>
+    <p>Odpowiedź: Zastanawiam się nad tym.</p>
+    <h3>Pytanie nr. 4: Czy udostępniasz filmiki z dubbingiem?</h3>
+    <p>Odpowiedź: Nie udostępniam plików wideo ze względu na prawa autorskie.</p>
+</section>
+
+<section id="blog">
+    <h2><a href="https://retrotvmalina.blogspot.com" target="_blank">Blog RetroTVMalina</a></h2>
+</section>
+
+<section id="grupa-facebook">
+    <h2><a href="https://www.facebook.com/groups/1940786819769638" target="_blank">Grupa Facebook "Kanały z Bajkami"</a></h2>
+</section>
+
+<section id="wiki">
+    <h2><a href="https://co-by-bylo-gdyby-kanaly-z-bajkami-nie-umarly.fandom.com/pl/wiki/Co_by_było_gdyby_kanały_z_bajkami_nie_umarły%3F_Wiki" target="_blank">Kanały z Bajkami Wiki</a></h2>
+</section>
+
+<section id="playlista-kanaly">
+    <h2><a href="https://www.youtube.com/playlist?list=PLHHYfI8jZoQN4GdgpJUGuJt85Y2lmB9RG" target="_blank">Playlista Kanały z Bajkami</a></h2>
+</section>
+
+<section id="playlista-retro">
+    <h2><a href="https://www.youtube.com/playlist?list=PLHHYfI8jZoQPfo-dm95f2iUa-HaOpvbhP" target="_blank">Playlista RetroTVMalina</a></h2>
+</section>
+
+<footer>
+    Strona zrobiona przez ChatGPT 4o. Hosting przez Github.io.
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Ukrywa wszystkie sekcje
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Pokazuje wybraną sekcję
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
